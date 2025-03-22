@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage that appears on the browser tab -->
+    <title>Document</title>
+
+    <!-- Link to external stylesheets for page styling -->
+    <link rel="stylesheet" href="projectstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main container div that holds all the content -->
+    <div class="container">
+      <!-- Tab buttons for navigating between different projects -->
+      <div class="tab_box">
+        <!-- Button for Project 1: Tic Tac Toe Game -->
+        <button class="tab_btn">
+          <li style="list-style-type: none">
+            <!-- Project 1 link -->
+            <a
+              href="https://rksorry7255tu.github.io/My-Personal-Website1.2/ticgame.html"
+              >Project1</a
+            >
+          </li>
+        </button>
+
+        <!-- Button for Project 2: Rock Paper Scissors Game -->
+        <button class="tab_btn">
+          <li style="list-style-type: none">
+            <!-- Project 2 link -->
+            <a
+              href="https://rksorry7255tu.github.io/My-Personal-Website1.2/rockindex.html"
+              >Project2</a
+            >
+          </li>
+        </button>
+
+        <!-- Button for Project 3: Amazon Clone (Under development) -->
+        <button class="tab_btn">
+          <li style="list-style-type: none">
+            <!-- Project 3 link -->
+            <a href="https://rksorry7255tu.github.io/AmazoneClone/">Project3</a>
+          </li>
+        </button>
+
+        <!-- Placeholder for a line (currently commented out) -->
+        <!-- <div class="line"></div> -->
+      </div>
+
+      <!-- Home link at the bottom -->
+      <li>
+        <a style="font-size: 2rem; list-style-type: none" href="index.html"
+          >Home</a
+        >
+      </li>
+
+      <!-- Content box to hold project descriptions -->
+      <div class="content_box">
+        <!-- Content for Project 1 -->
+        <div class="content">
+          <h2>Tic Tac Toe</h2>
+        </div>
+
+        <!-- Content for Project 2 -->
+        <div class="content">
+          <h2>Rock Paper Scissors</h2>
+        </div>
+
+        <!-- Content for Project 3, which is currently under development -->
+        <div class="content">
+          <h2>Amazon first page</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+      // Select all tab buttons and content sections
+      const tabs = document.querySelectorAll(".tab_btn");
+      const all_content = document.querySelectorAll(".content");
+
+      // Add event listener to each tab button
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          // Remove 'active' class from all tabs when a new tab is clicked
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+
+          // Add 'active' class to the clicked tab to indicate it is selected
+          tab.classList.add("active");
+
+          // Remove 'active' class from all content sections
+          all_content.forEach((content) => {
+            content.classList.remove("active");
+          });
+
+          // Add 'active' class to the content corresponding to the selected tab
+          all_content[index].classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
